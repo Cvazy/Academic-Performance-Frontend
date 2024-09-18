@@ -14,7 +14,7 @@ function App() {
       >
         <Header />
 
-        <main className={"flex flex-grow w-full"}>
+        <main className={"flex items-center flex-grow w-full"}>
           <div className={"flex justify-center w-full h-full"}>
             <div className={"max-w-[1440px] px-4 w-full h-full md:px-7"}>
               <AppRouter />

@@ -3,5 +3,16 @@
   "Tables": "Таблицы",
   "Graphs": "Графики",
   "Login": "Войти",
-  "find...": "поиск..."
+  "Register": "Зарегистрироваться",
+  "find...": "поиск...",
+  "Authorization": "Авторизация",
+  "Registration": "Регистрация",
+  "Non ho un account": "Ещё нет аккаунта",
+  "Enter your login": "Введите ваш логин",
+  "Login...": "Логин...",
+  "Enter your password": "Введите ваш пароль",
+  "Password...": "Пароль...",
+  "Repeat your password": "Повторите ваш пароль",
+  "Repeat password...": "Повтор пароля...",
+  "Already have an account": "Уже есть аккаунт"
 }

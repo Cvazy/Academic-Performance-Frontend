@@ -3,5 +3,16 @@
   "Tables": "Tables",
   "Graphs": "Graphs",
   "Login": "Login",
-  "find...": "find..."
+  "Register": "Register",
+  "find...": "find...",
+  "Authorization": "Authorization",
+  "Registration": "Registration",
+  "Non ho un account": "Non ho un account",
+  "Enter your login": "Enter your login",
+  "Login...": "Login...",
+  "Enter your password": "Enter your password",
+  "Password...": "Password...",
+  "Repeat your password": "Repeat your password",
+  "Repeat password...": "Repeat password...",
+  "Already have an account": "Already have an account"
 }
