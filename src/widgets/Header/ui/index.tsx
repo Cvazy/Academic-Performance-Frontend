@@ -1,7 +1,7 @@
 import { ChangeLanguage } from "./ChangeLanguage";
 import { HeaderNavigation } from "./HeaderNavigation";
 import { ProfileBlock } from "./ProfileBlock";
-import { StudentSearch } from "features";
+import { StudentSearch } from "features/index";
 
 export const Header = () => {
   return (
