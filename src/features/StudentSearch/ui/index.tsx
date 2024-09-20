@@ -17,7 +17,7 @@ export const StudentSearch = () => {
     <div className={"flex items-center relative h-full"}>
       <div className={"absolute left-0 top-[1.675rem] z-20"}>
         <img
-          className={"block min-w-4 max-w-4 min-h-4 max-h-4"}
+          className={"block min-w-4 max-w-4 min-h-4 max-h-4 select-none"}
           src={SearchIcon}
           alt={"Search"}
           loading={"lazy"}
