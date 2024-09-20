@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { DayOfWeek, MonthOfYear } from "../model";
 
 export const RelevantTimeBlock = () => {
-  const { t } = useTranslation("mainPage");
+  const { t } = useTranslation("");
 
   const [time, setTime] = useState<string>(() => {
     const date = new Date();

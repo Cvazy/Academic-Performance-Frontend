@@ -64,7 +64,7 @@ export const GraduateRates = () => {
             type="monotone"
             name="Overall Gap Rate"
             dataKey="value1"
-            stroke="#8884d8"
+            stroke="#5E77FF"
             fillOpacity={1}
             fill="url(#colorValue1)"
           />
@@ -73,7 +73,7 @@ export const GraduateRates = () => {
             type="monotone"
             name="Overall system-wide student Grad. Rate"
             dataKey="value2"
-            stroke="#82ca9d"
+            stroke="#C887EB"
             fillOpacity={1}
             fill="url(#colorValue2)"
           />
