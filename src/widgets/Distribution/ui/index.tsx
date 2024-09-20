@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { CustomPieChart } from "./CustomPieChart";
 
 export const Distribution = () => {
   const { t } = useTranslation("mainPage");
@@ -16,6 +17,8 @@ export const Distribution = () => {
           >
             {t("Distribution")}
           </h2>
+
+          <CustomPieChart />
         </div>
       </div>
     </div>
