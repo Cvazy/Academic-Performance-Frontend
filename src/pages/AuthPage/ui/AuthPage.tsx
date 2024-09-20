@@ -11,7 +11,7 @@ const AuthPage = () => {
     <div className={"flex items-center justify-center w-full h-full"}>
       <div
         className={
-          "max-w-lg w-full border border-solid border-[#2B3034] border-opacity-10 rounded-xl shadow-[0_0_48px_-10px_#0000007a]"
+          "max-w-lg bg-white w-full border border-solid border-[#2B3034] border-opacity-10 rounded-xl shadow-[0_0_48px_-10px_#0000007a]"
         }
       >
         <div className={"w-full py-14 px-4 sm:px-6 md:px-9 lg:px-12 xl:px-16"}>
