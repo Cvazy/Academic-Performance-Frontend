@@ -14,8 +14,12 @@ export const StudentSearch = () => {
   };
 
   return (
-    <div className={"flex items-center relative h-full"}>
-      <div className={"absolute left-0 top-[1.675rem] z-20"}>
+    <div
+      className={
+        "flex items-center relative h-[40px] w-full lg:w-auto lg:h-full"
+      }
+    >
+      <div className={"absolute left-0 top-3 z-20 lg:top-[1.675rem]"}>
         <img
           className={"block min-w-4 max-w-4 min-h-4 max-h-4 select-none"}
           src={SearchIcon}
@@ -25,7 +29,7 @@ export const StudentSearch = () => {
         />
       </div>
 
-      <label className={"relative ml-6"}>
+      <label className={"relative ml-6 w-full lg:w-auto"}>
         <p
           className={`absolute ${focusState ? "scale-[0.6] top-[-16px] left-[-8px]" : "left-0 top-0"} text-base font-medium text-[#2B3034] text-opacity-30`}
         >
@@ -34,7 +38,7 @@ export const StudentSearch = () => {
 
         <input
           className={
-            "text-base font-medium text-[#2B3034] text-opacity-30 bg-none outline-none border-none"
+            "text-base font-medium text-[#2B3034] text-opacity-30 bg-none outline-none border-b border-solid w-full pb-1 lg:pb-0 lg:border-none lg:w-auto"
           }
           value={searchPrompt}
           onChange={({ target }) => setSearchPrompt(target.value)}

@@ -17,7 +17,7 @@ export const NavItem: FC<NavItemProps> = ({ link, text }) => {
         [
           "flex items-center justify-center text-[#2B3034] text-base h-full",
           isActive
-            ? "border-b border-solid border-[#2B3034]"
+            ? "border-b border-solid border-[#2B3034] pb-3 lg:pb-0"
             : "text-opacity-30 hover:text-opacity-100",
         ].join(" ")
       }
