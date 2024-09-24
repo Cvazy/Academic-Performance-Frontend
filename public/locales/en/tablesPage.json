@@ -1,0 +1,26 @@
+{
+  "agGrid": {
+    "filter": {
+      "equals": "Equals",
+      "notEqual": "Not equal",
+      "lessThan": "Less than",
+      "greaterThan": "Greater than",
+      "contains": "Contains",
+      "doesNotContain": "Does not contain",
+      "startsWith": "Starts with",
+      "endsWith": "Ends with",
+      "applyFilter": "Apply Filter",
+      "resetFilter": "Reset Filter",
+      "clearFilter": "Clear Filter",
+      "notBlank": "Not blank",
+      "blank": "Blank"
+    },
+    "columns": {
+      "make": "Make",
+      "model": "Model",
+      "price": "Price",
+      "electric": "Electric",
+      "month": "Month"
+    }
+  }
+}

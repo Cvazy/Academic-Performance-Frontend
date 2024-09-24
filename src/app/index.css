@@ -34,3 +34,35 @@ input, textarea {
 textarea {
   transition-property: none;
 }
+
+path {
+  outline: none;
+}
+
+.ag-theme-quartz {
+  --ag-foreground-color: #282D32 !important;
+  --ag-background-color: rgb(255, 255, 255) !important;
+  --ag-header-background-color: rgb(255, 255, 255) !important;
+  --ag-row-hover-color: rgba(139, 126, 246, 0.3) !important;
+}
+
+.ag-paging-description,
+.ag-paging-row-summary-panel {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .ag-paging-panel {
+    flex-direction: column !important;
+    height: fit-content !important;
+    gap: 8px !important;
+    align-items: flex-start !important;
+    padding: 12px !important;
+  }
+
+  .ag-paging-page-size,
+  .ag-paging-row-summary-panel,
+  .ag-paging-page-summary-panel {
+    margin: 0 !important;
+  }
+}

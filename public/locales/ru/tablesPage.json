@@ -1,0 +1,26 @@
+{
+  "agGrid": {
+    "filter": {
+      "equals": "Равно",
+      "notEqual": "Не равно",
+      "lessThan": "Меньше чем",
+      "greaterThan": "Больше чем",
+      "contains": "Содержит",
+      "doesNotContain": "Не содержит",
+      "startsWith": "Начинается с",
+      "endsWith": "Заканчивается на",
+      "applyFilter": "Применить фильтр",
+      "resetFilter": "Сбросить фильтр",
+      "clearFilter": "Очистить фильтр",
+      "notBlank": "Не пусто",
+      "blank": "Пусто"
+    },
+    "columns": {
+      "make": "Марка",
+      "model": "Модель",
+      "price": "Цена",
+      "electric": "Электрический",
+      "month": "Месяц"
+    }
+  }
+}
