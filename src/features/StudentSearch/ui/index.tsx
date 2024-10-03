@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import SearchIcon from "shared/assets/images/search.svg";
 import { useState } from "react";
+import { FoundStudentsList } from "./FoundStudentsList";
 
 export const StudentSearch = () => {
   const { t } = useTranslation();
@@ -47,6 +48,10 @@ export const StudentSearch = () => {
           type={"text"}
         />
       </label>
+
+      <div className={"absolute left-0 right-0 top-[50px]"}>
+        <FoundStudentsList />
+      </div>
     </div>
   );
 };
