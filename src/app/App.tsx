@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import AppRouter from "app/providers/Routers/ui/AppRouter";
 import { Loader } from "shared/ui";
-import "./index.css";
+import "./index.scss";
 import { Header } from "widgets";
 import { RelevantTimeBlock } from "features";
 import { useMatch } from "react-router-dom";
