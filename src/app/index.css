@@ -66,3 +66,67 @@ path {
     margin: 0 !important;
   }
 }
+
+.input-number {
+  width: 100px;
+  position: relative;
+}
+
+.input-number__input {
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border: 1px solid #d0c4db;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  transition: .2s;
+}
+
+@media (max-width: 480px) {
+  .input-number {
+    width: 100%;
+  }
+}
+
+.input-number__input::-webkit-outer-spin-button,
+.input-number__input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-number:hover .input-number__input,
+.input-number:focus .input-number__input {
+  border-color: #888;
+}
+
+.input-number__top {
+  width: 0;
+  border: 5px solid transparent;
+  border-bottom: 7px solid #d0c4db;
+  position: absolute;
+  top: 5%;
+  right: 5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.input-number__top:hover {
+  border-bottom-color: #888;
+}
+
+.input-number__bottom {
+  width: 0;
+  border: 5px solid transparent;
+  border-top: 7px solid #d0c4db;
+  position: absolute;
+  top: 60%;
+  right: 5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.input-number__bottom:hover {
+  border-top-color: #888;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   LineChart,
   Line,
@@ -11,6 +11,8 @@ import {
 import { SignificantChanges } from "./SignificantChanges";
 import { CustomDot } from "./CustomDot";
 import { DataRow } from "./../model";
+import { inputOptionChange } from "./../model";
+import { useTranslation } from "react-i18next";
 
 const initialData: DataRow[] = [
   {
@@ -51,11 +53,15 @@ const initialData: DataRow[] = [
 ];
 
 export const AcademicPerformanceChart = () => {
+  const { t } = useTranslation("graphsPage");
+
   const [filteredData, setFilteredData] = useState<DataRow[]>(initialData);
   const [startDate, setStartDate] = useState<number>(2014);
   const [endDate, setEndDate] = useState<number>(2020);
   const [maxIncrease, setMaxIncrease] = useState<DataRow | null>(null);
   const [maxDecrease, setMaxDecrease] = useState<DataRow | null>(null);
+  const startDateRef = useRef<HTMLInputElement>(null);
+  const endDateRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const filtered = initialData.filter(
@@ -88,6 +94,14 @@ export const AcademicPerformanceChart = () => {
     setMaxDecrease(maxDecrease);
   }, [startDate, endDate]);
 
+  const inputDateChange = (optionType: string, inputType: string) => {
+    if (optionType === "startDate" && startDateRef.current) {
+      inputOptionChange(inputType, startDateRef, setStartDate);
+    } else if (optionType !== "startDate" && endDateRef.current) {
+      inputOptionChange(inputType, endDateRef, setEndDate);
+    }
+  };
+
   return (
     <div
       className={
@@ -108,28 +122,72 @@ export const AcademicPerformanceChart = () => {
             Yearly Gap Rate
           </h2>
 
-          <div>
-            <label>
-              Start Year:
-              <input
-                type="number"
-                value={startDate}
-                onChange={(e) => setStartDate(parseInt(e.target.value))}
-                min="2014"
-                max="2020"
-              />
-            </label>
+          <div
+            className={
+              "flex flex-col items-center gap-4 w-full min-[480px]:flex-row"
+            }
+          >
+            <div
+              className={
+                "flex items-center gap-2 flex-nowrap max-[480px]:w-full"
+              }
+            >
+              <p className={"text-base text-[#8494A5] font-bold"}>
+                {t("FROM")}
+              </p>
 
-            <label style={{ marginLeft: "20px" }}>
-              End Year:
-              <input
-                type="number"
-                value={endDate}
-                onChange={(e) => setEndDate(parseInt(e.target.value))}
-                min="2014"
-                max="2020"
-              />
-            </label>
+              <div className="input-number">
+                <input
+                  ref={startDateRef}
+                  className="input-number__input"
+                  type="number"
+                  value={startDate}
+                  onChange={(e) => setStartDate(parseInt(e.target.value))}
+                  min="2014"
+                  max="2020"
+                />
+
+                <div
+                  className="input-number__top"
+                  onClick={() => inputDateChange("startDate", "increment")}
+                ></div>
+
+                <div
+                  className="input-number__bottom"
+                  onClick={() => inputDateChange("startDate", "decrement")}
+                ></div>
+              </div>
+            </div>
+
+            <div
+              className={
+                "flex items-center gap-2 flex-nowrap max-[480px]:w-full"
+              }
+            >
+              <p className={"text-base text-[#8494A5] font-bold"}>{t("TO")}</p>
+
+              <div className="input-number w-fit">
+                <input
+                  ref={endDateRef}
+                  className="input-number__input"
+                  type="number"
+                  value={endDate}
+                  onChange={(e) => setEndDate(parseInt(e.target.value))}
+                  min="2014"
+                  max="2020"
+                />
+
+                <div
+                  className="input-number__top"
+                  onClick={() => inputDateChange("endDate", "increment")}
+                ></div>
+
+                <div
+                  className="input-number__bottom"
+                  onClick={() => inputDateChange("endDate", "decrement")}
+                ></div>
+              </div>
+            </div>
           </div>
 
           <div className={"h-[480px] w-full"}>

@@ -15,7 +15,7 @@ export const Sidebar = () => {
       }
     >
       <div
-        className={`flex flex-col items-start ${descriptionVisible ? "gap-6 sm:gap-7 md:gap-8" : ""} w-full px-4 py-7 sm:px-5 sm:py-8 xl:px-6 xl:py-12`}
+        className={`flex flex-col items-start ${descriptionVisible ? "gap-6 sm:gap-7 md:gap-8" : ""} w-full px-4 py-7 sm:px-5 sm:py-8 lg:gap-10 xl:px-6 xl:py-12`}
       >
         <div
           className={
