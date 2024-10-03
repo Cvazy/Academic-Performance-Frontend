@@ -1,4 +1,5 @@
 import ProfileIcon from "shared/assets/images/profile.svg";
+import { Link } from "react-router-dom";
 
 export const FoundStudentsList = () => {
   return (
@@ -8,10 +9,10 @@ export const FoundStudentsList = () => {
       }
     >
       <div className={"flex flex-col max-h-28 overflow-y-scroll w-full"}>
-        <a
-          href={"/student"}
+        <Link
+          to={"/student"}
           className={
-            "flex items-center px-2.5 py-1.5 min-h-8 cursor-pointer overflow-hidden gap-1.5 w-full hover:bg-[#8ccbff5e]"
+            "flex items-center px-2.5 py-1.5 min-h-8 overflow-hidden gap-1.5 w-full hover:bg-[#8ccbff5e]"
           }
         >
           <img
@@ -29,12 +30,12 @@ export const FoundStudentsList = () => {
           >
             Мурахтанов Павел Игоревич
           </p>
-        </a>
+        </Link>
 
-        <a
-          href={"/student"}
+        <Link
+          to={"/student"}
           className={
-            "flex items-center px-2.5 py-1.5 min-h-8 cursor-pointer overflow-hidden gap-1.5 w-full hover:bg-[#8ccbff5e]"
+            "flex items-center px-2.5 py-1.5 min-h-8 overflow-hidden gap-1.5 w-full hover:bg-[#8ccbff5e]"
           }
         >
           <img
@@ -52,7 +53,7 @@ export const FoundStudentsList = () => {
           >
             Нечаев Роман Игоревич
           </p>
-        </a>
+        </Link>
       </div>
     </div>
   );

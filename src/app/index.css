@@ -23,6 +23,7 @@ p {
   margin: 0;
 }
 
+a,
 button {
   cursor: pointer;
 }
