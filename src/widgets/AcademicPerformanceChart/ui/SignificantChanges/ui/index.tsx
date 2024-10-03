@@ -1,6 +1,11 @@
 import { useTranslation } from "react-i18next";
+import { SignificantChangesProps } from "widgets/AcademicPerformanceChart/model";
+import { SignificantItem } from "./SignificantItem";
 
-export const SignificantChanges = () => {
+export const SignificantChanges = ({
+  maxIncrease,
+  maxDecrease,
+}: SignificantChangesProps) => {
   const { t } = useTranslation("graphsPage");
 
   return (
@@ -16,7 +21,11 @@ export const SignificantChanges = () => {
           {t("Significant Changes")}
         </p>
 
-        <div className={"flex items-start gap-5 w-full"}></div>
+        <div className={"flex items-start gap-5 flex-wrap w-full"}>
+          <SignificantItem maxDecrease={maxDecrease} maxIncrease={null} />
+
+          <SignificantItem maxIncrease={maxIncrease} maxDecrease={null} />
+        </div>
       </div>
     </div>
   );

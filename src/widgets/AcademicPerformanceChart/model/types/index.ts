@@ -5,3 +5,8 @@ export interface DataRow {
   change: string;
   changeType: "positive" | "negative";
 }
+
+export interface SignificantChangesProps {
+  maxIncrease: DataRow | null;
+  maxDecrease: DataRow | null;
+}

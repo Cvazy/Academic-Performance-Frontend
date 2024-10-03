@@ -54,12 +54,38 @@ export const AcademicPerformanceChart = () => {
   const [filteredData, setFilteredData] = useState<DataRow[]>(initialData);
   const [startDate, setStartDate] = useState<number>(2014);
   const [endDate, setEndDate] = useState<number>(2020);
+  const [maxIncrease, setMaxIncrease] = useState<DataRow | null>(null);
+  const [maxDecrease, setMaxDecrease] = useState<DataRow | null>(null);
 
   useEffect(() => {
     const filtered = initialData.filter(
       (data) => data.year >= startDate && data.year <= endDate,
     );
     setFilteredData(filtered);
+
+    const parseChange = (change: string) => {
+      return parseFloat(change.replace("%", ""));
+    };
+
+    let maxIncrease: DataRow | null = null;
+    let maxDecrease: DataRow | null = null;
+
+    filtered.forEach((data) => {
+      const changeValue = parseChange(data.change);
+
+      if (changeValue > 0) {
+        if (!maxIncrease || changeValue > parseChange(maxIncrease.change)) {
+          maxIncrease = data;
+        }
+      } else if (changeValue < 0) {
+        if (!maxDecrease || changeValue < parseChange(maxDecrease.change)) {
+          maxDecrease = data;
+        }
+      }
+    });
+
+    setMaxIncrease(maxIncrease);
+    setMaxDecrease(maxDecrease);
   }, [startDate, endDate]);
 
   return (
@@ -144,7 +170,7 @@ export const AcademicPerformanceChart = () => {
         </div>
       </div>
 
-      <SignificantChanges />
+      <SignificantChanges maxIncrease={maxIncrease} maxDecrease={maxDecrease} />
     </div>
   );
 };

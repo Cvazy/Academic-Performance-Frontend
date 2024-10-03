@@ -1,7 +1,12 @@
 import { useTranslation } from "react-i18next";
 
+import ArrowIcon from "shared/assets/images/arrow.svg";
+import { useState } from "react";
+
 export const Sidebar = () => {
   const { t } = useTranslation("graphsPage");
+
+  const [descriptionVisible, setDescriptionVisible] = useState(false);
 
   return (
     <div
@@ -9,13 +14,100 @@ export const Sidebar = () => {
         "bg-[#E6EDFC] shadow-[0_0_48px_-10px_#0000007a] w-full lg:shadow-none"
       }
     >
-      <div className={"px-4 py-7 w-full sm:px-5 sm:py-8 xl:px-6 xl:py-12"}>
+      <div
+        className={`flex flex-col items-start ${descriptionVisible ? "gap-6 sm:gap-7 md:gap-8" : ""} w-full px-4 py-7 sm:px-5 sm:py-8 xl:px-6 xl:py-12`}
+      >
         <div
-          className={"flex flex-col items-start gap-6 w-full sm:gap-7 md:gap-8"}
+          className={
+            "flex items-center justify-between gap-4 cursor-pointer w-full lg:justify-start"
+          }
+          onClick={() => setDescriptionVisible(!descriptionVisible)}
         >
           <h2 className="text-xl text-[#282D32] font-bold md:text-2xl xl:text-3xl">
             {t("Description")}
           </h2>
+
+          <img
+            className={`block select-none min-w-4 max-w-4 ${descriptionVisible ? "rotate-180" : ""} lg:hidden`}
+            src={ArrowIcon}
+            alt={"Arrow"}
+            loading={"lazy"}
+            draggable={"false"}
+          />
+        </div>
+
+        <div
+          className={`flex flex-col items-start gap-6 w-full overflow-hidden ${descriptionVisible ? "max-h-96" : "max-h-0"} lg:!max-h-full lg:gap-8`}
+        >
+          <p
+            className={
+              "text-black text-left text-sm font-bold border-b border-solid border-[#B8BACA] pb-3.5 w-full lg:text-base"
+            }
+          >
+            {t("Pell Students Trends")}
+          </p>
+
+          <div className={"flex flex-col items-start gap-4 w-full"}>
+            <div
+              className={
+                "flex items-center gap-3 justify-between border-b border-solid border-[#B8BACA] pb-3.5 w-full"
+              }
+            >
+              <p
+                className={"text-black text-left text-xs font-bold lg:text-sm"}
+              >
+                Pell category 1
+              </p>
+
+              <p
+                className={
+                  "text-[#4A6078] text-right text-xs font-bold lg:text-sm"
+                }
+              >
+                X Students
+              </p>
+            </div>
+
+            <div
+              className={
+                "flex items-center gap-3 justify-between border-b border-solid border-[#B8BACA] pb-3.5 w-full"
+              }
+            >
+              <p
+                className={"text-black text-left text-xs font-bold lg:text-sm"}
+              >
+                Pell category 2
+              </p>
+
+              <p
+                className={
+                  "text-[#4A6078] text-right text-xs font-bold lg:text-sm"
+                }
+              >
+                X Students
+              </p>
+            </div>
+
+            <div
+              className={
+                "flex items-center gap-3 justify-between border-b border-solid border-[#B8BACA] pb-3.5 w-full"
+              }
+            >
+              <p
+                className={"text-black text-left text-xs font-bold lg:text-sm"}
+              >
+                Pell category 3
+              </p>
+
+              <p
+                className={
+                  "text-[#4A6078] text-right text-xs font-bold lg:text-sm"
+                }
+              >
+                X Students
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
