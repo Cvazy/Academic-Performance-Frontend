@@ -14,11 +14,11 @@ function App() {
   const navigate = useNavigate();
   const isAuth = localStorage.getItem("user");
 
-  // useEffect(() => {
-  //   if (!isAuth && !isRegisterPage) {
-  //     navigate("/login");
-  //   }
-  // }, [isAuth, isRegisterPage, navigate]);
+  useEffect(() => {
+    if (!isAuth && !isRegisterPage) {
+      navigate("/login");
+    }
+  }, [isAuth, isRegisterPage, navigate]);
 
   return (
     <Suspense fallback={<Loader />}>
