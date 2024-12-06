@@ -1,0 +1,29 @@
+{
+  "agGrid": {
+    "filter": {
+      "equals": "Equals",
+      "notEqual": "Not equal",
+      "lessThan": "Less than",
+      "greaterThan": "Greater than",
+      "contains": "Contains",
+      "doesNotContain": "Does not contain",
+      "startsWith": "Starts with",
+      "endsWith": "Ends with",
+      "applyFilter": "Apply Filter",
+      "resetFilter": "Reset Filter",
+      "clearFilter": "Clear Filter",
+      "notBlank": "Not blank",
+      "blank": "Blank"
+    },
+    "columns": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "middle_name": "Middle name",
+      "year_of_entry": "Year of entry",
+      "year_of_ending": "Year of ending",
+      "group": "Group",
+      "form_of_education": "Form of education"
+    }
+  },
+  "Student data": "Student data"
+}

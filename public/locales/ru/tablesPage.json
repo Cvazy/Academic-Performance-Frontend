@@ -1,0 +1,29 @@
+{
+  "agGrid": {
+    "filter": {
+      "equals": "Равно",
+      "notEqual": "Не равно",
+      "lessThan": "Меньше чем",
+      "greaterThan": "Больше чем",
+      "contains": "Содержит",
+      "doesNotContain": "Не содержит",
+      "startsWith": "Начинается с",
+      "endsWith": "Заканчивается на",
+      "applyFilter": "Применить фильтр",
+      "resetFilter": "Сбросить фильтр",
+      "clearFilter": "Очистить фильтр",
+      "notBlank": "Не пусто",
+      "blank": "Пусто"
+    },
+    "columns": {
+      "first_name": "Имя",
+      "last_name": "Фамилия",
+      "middle_name": "Отчество",
+      "year_of_entry": "Год поступления",
+      "year_of_ending": "Год окончания",
+      "group": "Группа",
+      "form_of_education": "Форма обучения"
+    }
+  },
+  "Student data": "Данные студентов"
+}

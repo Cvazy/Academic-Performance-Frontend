@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="190.416" height="84.314" viewBox="0 0 178.851 63.43" fill="none" stroke="none" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient_1" gradientUnits="userSpaceOnUse" x1="19.301" y1="14.584" x2="152.453" y2="-11.025">
+            <stop offset="0" stop-color="#F551A7" />
+            <stop offset="1" stop-color="#A600FF" />
+        </linearGradient>
+    </defs>
+    <g id="Group" transform="translate(1.199 1.199)">
+        <path id="Path 2 Copy 2" d="M0 14.5968C28.904 10.9091 37.9621 20.2466 63.8055 21.8952C81.7454 23.0396 90.3462 14.4704 105.609 12.9125C108.126 12.6556 110.782 12.6849 113.31 12.9125C123.298 13.812 132.923 16.8091 143.012 16.281C154.31 15.6897 159.273 6.46116 165.014 3.36849C167.955 1.78418 172.348 1.12283 176.015 0" style="fill:none;stroke-width:2;stroke:url(#gradient_1);mix-blend-mode:normal;" transform="matrix(-0.974 -0.225 0.225 -0.974 171.504 61.031)" />
+        <g style="fill:#F551A7;fill-rule:evenodd;mix-blend-mode:normal;" transform="translate(166 18)">
+            <path id="Oval 3 Copy" d="M3 6C4.65686 6 6 4.65685 6 3C6 1.34315 4.65686 0 3 0C1.34314 0 0 1.34315 0 3C0 4.65685 1.34314 6 3 6Z" />
+        </g>
+    </g>
+</svg>
