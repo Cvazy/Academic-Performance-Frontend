@@ -1,10 +1,10 @@
 name: GitHub Actions Demo
 on:
   push:
-    branches: [ master ]
+    branches: [ main, master ]
 
   pull_request:
-    branches: [ master ]
+    branches: [ main, master ]
 jobs:
   init:
     runs-on: ubuntu-latest
